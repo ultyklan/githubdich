@@ -1,0 +1,215 @@
+body
+{ margin: auto;
+    font-family: 'Roboto', sans-serif;
+    max-width: 1300px;
+    background-image: url(fone.jpg);
+}
+
+
+.header{
+ 
+margin: 10px auto auto auto;
+height: 50px;
+width: 80%;
+background-color: #00BFFF;
+border-radius: 20px;
+/*opacity: 0.3;*/
+
+
+
+
+}
+a{
+text-decoration: none;
+
+
+}
+
+.elem{
+
+  transition: 0.5s;
+}
+.elem:hover{
+  transform: scale(1.2);
+
+
+}
+.flex_group{
+margin-left: 20%;
+margin-right: 20%;
+height: 70px;
+display: flex;
+align-items: center;
+justify-content: space-between;
+
+
+
+}
+table{ background-color: #ffffff;
+  box-shadow: 0px 10px 100px 0px rgba(0, 0, 0, 0.3);
+}
+
+
+.elem{
+  
+  border-radius: 5px;
+  padding: 5px; 
+  height: 20px;
+  background-color: aliceblue;
+   
+}
+.table {
+	width: 100%;
+	margin-bottom: 20px;
+	border: 1px solid #dddddd;
+	border-collapse: separate; 
+    border-spacing: 0;
+    border-radius: 20px;
+   
+   
+}
+.table th {
+	font-weight: regular;
+	padding: 5px;
+	
+	border: 1px solid #dddddd;
+}
+.table td {
+	border: 1px solid #dddddd;
+	padding: 5px;
+}
+
+.middle{
+  
+    margin:50px auto;
+width: 80%;
+
+}
+table tr:last-child th {
+    border-top: 0;
+    
+  }
+  table tr:first-child td,table tr:last-child th {
+    border-bottom: 0;
+  }
+  table tr td:first-child,
+  table tr th:first-child {
+    border-left: 0;
+  }
+  table tr td:last-child,
+  table tr th:last-child {
+    border-right: 0;
+  }
+  .dropdown{
+    position: relative;
+    display: inline-block;
+
+  }
+  .buttd{
+text-align: center;
+
+  }
+  .dropbtn{
+     border: oldlace;
+     border-radius: 5px;
+      
+
+  }
+  .title{
+    margin-left: 10px;
+  }
+  .dropdown-content{
+      border-radius: 5px;
+      display: none;
+      position: absolute;
+      z-index: 1;
+      background-color: gray;
+      box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.2);
+  }
+  .dropdown-content a{
+      text-decoration: none;
+      display:block;
+      padding: 5px;
+  }
+  .dropdown:hover .dropdown-content{
+      display: block;
+  }
+  .form-select{
+    margin-left: 10px;
+  }
+
+  .form-add{
+    
+   display: flex;
+   justify-content: center;
+  
+   
+  }
+  .form-add, div{
+margin-bottom: 20px;
+
+  }
+  .form-add, input{
+    border: none;
+    border-radius: 20px;
+    height: 20px;
+ 
+  }
+  .form-control{
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+      background-color: rgba(0, 0, 0, 0.1);
+
+  }
+   .image-form, .text-form, .type, .add_title, .valuev_in, .var-title{
+    display: flex;
+    justify-content: center;
+    
+  }
+  
+  input{ font-size: 14px;}
+
+.btn-primary{   border-radius: 20px;
+  background-color: #00BFFF;
+  border: none;
+  width: 200px;
+  height: 40px;}
+
+  .form-control-file{
+ 
+  padding-left: 5px;
+  margin-left: 10px;
+    background-color: rgba(0, 0, 0, 0.1);
+    height: 19px;
+  }
+ 
+  .image-form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .save{
+    display: flex;
+    justify-content: center;
+    
+  
+
+  }
+  
+
+.select-items{
+  margin-left: 10px;
+  background-color: rgba(0, 0, 0, 0.045);
+}
+.td-img{
+text-align: center;
+
+}
+.img-value{
+  height:40px;
+}
+
+
+
+
