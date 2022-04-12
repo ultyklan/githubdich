@@ -18,9 +18,12 @@ require_once '../panel/connection/variables.php';
     <link rel="stylesheet" href="./styles/style-buttons.css">
     <link rel="stylesheet" href="./styles/style_menu.css">
     <link rel="stylesheet" href="./styles/stars.css">
+    <link rel="stylesheet" href="styles/style_preloader.css">
     <title>Document</title>
 </head>
 <body>
+<script src="scripts/preloader.js"></script> 
+<?php include "menu/preloader.html"; ?>
 <?php include "styles/stars.html"; ?>
 
     <div class="content">

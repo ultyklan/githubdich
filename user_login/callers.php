@@ -16,7 +16,7 @@ require_once '../panel/connection/variables.php';
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-
+    <link rel="stylesheet" href="styles/style_preloader.css">
     <link rel="stylesheet" href="./styles/style_callers.css">
     <link rel="stylesheet" href="./styles/stars.css">
     <link rel="stylesheet" href="./styles/style-buttons.css">
@@ -36,6 +36,8 @@ require_once '../panel/connection/variables.php';
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
+<script src="scripts/preloader.js"></script> 
+<?php include "menu/preloader.html"; ?>
 
 <?php include "styles/stars.html";?>
   
@@ -127,6 +129,8 @@ require_once '../panel/connection/variables.php';
                                     <script> $('#ddinput').dateDropper();</script>
                             </div>
 
+                        </div>
+                        <div class="error" id="error">
                         </div>
                         
                         <div class="button_enter">

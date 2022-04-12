@@ -18,18 +18,31 @@ else{
             $response['error_pass']='Пароль'; 
         }
         else{
+
                 if (mysqli_num_rows($log_in)>0){
-                    $response['success']='1';
+                   
                     $user=mysqli_fetch_assoc($log_in);
-                    $_SESSION['user'] = [
-                    "id" => $user['id'],
-                    "name" => $user['name'],
-                    "login"=> $user['login'],
-                    "photo" => $user['photo'],
-                    "address" => $user['address'],
-                    "email" => $user['email']
+                    $conf=$user['email_confirm'];
+                    if ($conf=="0"){
+                        $response['error_email']='подтвердите email';
+                    }
+                    else{
+                        $response['success']='1';
+                        $_SESSION['user'] = [
+                        "id" => $user['id'],
+                        "name" => $user['name'],
+                        "login"=> $user['login'],
+                        "photo" => $user['photo'],
+                        "address" => $user['address'],
+                        "email" => $user['email']
+                        
                     
-                ];
+                        ];
+                    }
+            
+               
+                    
+                
                 //header('Location:../profile.php');
 
 

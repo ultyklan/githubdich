@@ -12,7 +12,7 @@ session_start();
     <link rel="stylesheet" href="./styles/style_registration.css">
     <link rel="stylesheet" href="./styles/stars.css">
     <link rel="stylesheet" href="./styles/style-buttons.css">
-
+    <link rel="stylesheet" href="styles/style_preloader.css">
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/suggestions-jquery@18.6.0/dist/css/suggestions.min.css" type="text/css"
 		rel="stylesheet" />
@@ -23,6 +23,8 @@ session_start();
     <title>Document</title>
 </head>
 <body>
+<script src="scripts/preloader.js"></script> 
+<?php include "menu/preloader.html"; ?>
 <form action="<?php echo "includes/registration.php"?>" id="registration" method="POST" enctype="multipart/form-data">
     <div class="content">
         <div class="block">

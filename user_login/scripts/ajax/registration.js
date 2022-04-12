@@ -14,8 +14,17 @@ function send(event)
         processData: false,
         cache: false,
         data: form,
+        beforeSend: function() {
+            $("#preloader").show();
+        },
         success: function (data)
-            {   $('.error_text').remove();
+            {
+            $("#preloader").hide();
+            $('.error_text').remove();
+            if (data['error5']){
+                var error='Не удалось отправить подтвержение на ваш email'
+            }
+            else{
                 if(data['success']){
                     location='index.php';
                     }
@@ -49,7 +58,7 @@ function send(event)
                     }
                 
 
-                           
+                }        
         
             },
         error: function () {

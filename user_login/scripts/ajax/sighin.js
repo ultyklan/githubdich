@@ -15,8 +15,16 @@ function send(event)
         processData: false,
         cache: false,
         data: form,
+        beforeSend: function() {
+            $("#preloader").show();
+        },
         success: function (data)
-            {   $('.error_text').remove();
+            {   
+            
+                $("#preloader").hide();
+
+                $('.error_text').remove();
+            
                         if(data['success']){
                             location='profile.php';
                         }
@@ -31,6 +39,9 @@ function send(event)
                                 if(data['error_pass']){
                                 var error='Пароль не может быть меньше 6 символов';
                                 }
+                                if(data['error_email']){
+                                    var error='Подтвердите email';
+                                    }
                                 let row=`<div class="error_text"> <label class="error_text_text">${error}</label></div>`
                                 $("#error").append(row);
 

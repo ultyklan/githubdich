@@ -16,17 +16,17 @@ session_start();
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;1,100;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/style_preloader.css">
     
 </head>
 <body>
-
+<script src="scripts/preloader.js"></script> 
+<?php include "menu/preloader.html"; ?>
 
 <?php include "styles/stars.html"; ?>
-
-
 <form action="<?php echo "includes/sighin.php"?>" id="sighin" method="POST" enctype="multipart/form-data">
         <div class="content">
-            <div class="block_form">
+            <div class="block_form" id="block_form">
                 <div class="logo">
                     <div class="logo_image"> <img src="img/image/logo.svg" alt="ворона"></div>
                 </div>
@@ -51,7 +51,7 @@ session_start();
                     <div class="label_create">
                     <a href="registration.php">Зарегистрироваться!</a>
                     </div>
-                 
+                    
 
                 </div>
                    
@@ -62,6 +62,7 @@ session_start();
                            
                        
             </div>
+
             <script src="scripts/ajax/sighin.js"></script>   
         </div>
 
