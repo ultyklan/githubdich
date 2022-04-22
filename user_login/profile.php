@@ -33,7 +33,7 @@ if (!$_SESSION['user']) {
             <div class="name_and_image">
               
                     <label class="image_input">
-                        <img class="img_img" src="<?php echo $_SESSION['user']['photo']?>" alt="">
+                        <img class="img_img" src="<?php echo $_SESSION['user']['photo']?>"onError="this.src='img/image/logo.svg'" >
                         
                     </label>
             

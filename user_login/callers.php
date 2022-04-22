@@ -50,7 +50,7 @@ require_once '../panel/connection/variables.php';
         
              <div class="callers">
              <div class="logo">
-                  <div class="logo_image"> <img  class ="logo_imaage_profile" src="<?php echo $_SESSION['user']['photo']?>" alt="ворона"></div>
+                  <div class="logo_image"> <img  class ="logo_imaage_profile" src="<?php echo $_SESSION['user']['photo']?>" onError="this.src='img/image/logo.svg'"></div>
             </div>
             <form method="post" id="form" onsubmit="send(event, 'send.php')">
 

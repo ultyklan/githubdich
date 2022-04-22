@@ -18,10 +18,11 @@ function send(event, php){
                 let row=`<div class="error_text"> <label class="error_text_text">Заявка успешно отправлена</label></div>`
                                 $("#error").append(row);
             } else {
-                alert("Ошибка. не пон");
+                alert("Ошибка. Попробуйте позже");
             }
-        } else {alert("Ошибка сервера. Номер: "+req.status);}}; 
-    req.onerror = function() {alert("Ошибка отправки запроса");};
+        } else {alert("Ошибка сервера. Тут мы бессильны ");}}; 
+    req.onerror = function()
+    {alert("Ошибка отправки запроса");};
     req.send(new FormData(event.target));
     }
 

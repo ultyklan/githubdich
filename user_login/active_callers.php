@@ -70,17 +70,50 @@ require_once '../panel/connection/variables.php';
                             </div>
                             <div class="rewiew_caller">
                                 <div class="central_button">
-                                <button type="button" class="slide_from_left">Оставить отзыв</button>
+                                <button type="button" class="slide_from_left"onclick="openForm(<?php echo $caller['id'];?>)" >Оставить отзыв</button>
                                 </div>
                             </div>
-                            
+
+
+                            <div class="form-modal" style="display:none;" id="<?php echo $caller['id']; ?>"> 
+                                <div class="form-popup" >
+                                    <form action="includes/send_review.php?id=<?php echo $caller['id']; ?>" method="POST" enctype="multipart/form-data" class="form-container">
+                                        <div class="review_text">
+                                            <label class="rewiev_label">Отзыв о заявке</label>
+                                        </div>
+                                        <div class="number_review">
+                                            <label>Заявка номер: </label>
+                                            <label name="id_caller"><?php echo $caller["id"];?></label>
+                                        </div>
+                                        <div class="status_review">
+                                            <label>Статус заявки:</label>
+                                            <img src="img/image_active_callers/<?php echo $caller["status"];?>.svg" id="image">
+                                        </div>
+
+                                        <div class="positive_review">
+                                            <label class="text_positive_review" for="">Расскажите что понравилось:</label>
+                                            <textarea name="positive_text"class="review_input"  id="" cols="30" rows="10"></textarea>
+                                           
+
+                                        </div>
+                                        <div class="negative_review">
+                                            <label for="">Расскажите что не понравилось:</label>
+                                            <textarea name="negative_text"class="review_input" id="" cols="30" rows="10"></textarea>
+
+                                        </div>
+                                        <div class="button_group">
+                                            <button type="button" class="slide_from_left cancel" onclick="closeForm(<?php echo $caller['id']; ?>)">Отменить</button>
+                                            <button type="submit" class="slide_from_left sub" >Отправить</button>
+                                        </div>
+                                       
+                                    </form>
+                                </div>
+                            </div>
 
                         </div>
-                        <?php
-                            }
-                            ?>
+                    <?php } ?>
                         
-
+                            <script src="scripts/popup_callers.js"></script>
 
                     </div>
 

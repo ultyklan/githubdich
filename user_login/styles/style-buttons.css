@@ -40,3 +40,16 @@ button.slide_from_left {
     left: -100%;
     right: 100%;
   }
+
+  .slide_from_left.cancel::after {
+    background-color: #CD5C5C;
+  }
+  .slide_from_left.cancel:hover {
+    color: #fff;
+  }
+  .slide_from_left.sub::after {
+    background-color: #98FB98;
+  }
+  .slide_from_left.sub:hover {
+    color: #fff;
+  }
