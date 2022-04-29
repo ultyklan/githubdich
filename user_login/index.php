@@ -24,6 +24,7 @@ session_start();
 <?php include "menu/preloader.html"; ?>
 
 <?php include "styles/stars.html"; ?>
+
 <form action="<?php echo "includes/sighin.php"?>" id="sighin" method="POST" enctype="multipart/form-data">
         <div class="content">
             <div class="block_form" id="block_form">

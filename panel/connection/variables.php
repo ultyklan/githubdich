@@ -8,6 +8,7 @@ $variables_vibor_reasons = mysqli_query($connect, "SELECT * FROM `vibor_reasons`
 $callers = mysqli_query($connect, "SELECT * FROM `callers` WHERE `name_user`='$cal' ");
 $callersv = mysqli_query($connect, "SELECT * FROM `callers`");
 $status = mysqli_query($connect, "SELECT * FROM `status`");
+$review = mysqli_query($connect, "SELECT * FROM `reviews`");
 
 //редактирование
 $var_reasons = mysqli_fetch_assoc(mysqli_query($connect, "SELECT*FROM `select_reasons` WHERE `id`=$id"));

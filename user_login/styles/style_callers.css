@@ -1,4 +1,4 @@
-@media (max-width: 950px){
+@media (max-width: 1000px){
     .reason,.phone, .address, .date
     {
      display: flex;
@@ -10,7 +10,16 @@
     .callers_header,.phone_header,.address_header,.date_header{
         margin-bottom: 5px;
     }
-    
+    .error_text_text{
+        font-size:14px !important;
+        text-align: center;
+    }
+    .error{
+        width:100%;
+        padding-left: 5px;
+        padding-right: 5px;
+        
+    }
     
 }
     
@@ -69,7 +78,7 @@ body{
     z-index: 1;
     width: 70%;
     max-width: 800px;
-    min-width: 400px;
+    min-width: 460px;
     display: flex;
 
     background-color:#3cb3ff;
@@ -281,6 +290,13 @@ input{
       justify-content: center;
   }
   .error_text_text{
-      font-size: 20px;
+      font-size: 16px;
       color: #00ff00;
+  }
+  .slide_from_left{
+      width: 150px;
+  }
+  .label_name{
+  font-size: 20px;    
+
   }

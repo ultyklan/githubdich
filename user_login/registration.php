@@ -31,7 +31,7 @@ session_start();
             <div class="name_and_image">
               
                     <label class="image_input">
-                        <img class="img_img" src="img/image/1.png" alt="">
+                        <img class="img_img" id="result" src="img/image/state1.svg" alt="">
                         <input type="file" name="image" id="file" class="inp_image">
                     </label>
                    
@@ -49,7 +49,7 @@ session_start();
                 </div>
 
                 <div class="login_div">
-                    <div class="image_div"> <img class="img" src="img/image/mail.svg" alt=""></div>
+                    <div class="image_div"> <img class="img"  src="img/image/mail.svg" alt=""></div>
                     <div class="input"><input class="inp" name="email"type="email" placeholder="Email"></div>
                 </div>
                 <div class="address">

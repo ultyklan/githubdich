@@ -21,44 +21,23 @@ function send(event)
             {
             $("#preloader").hide();
             $('.error_text').remove();
-            if (data['error5']){
-                var error='Не удалось отправить подтвержение на ваш email'
-            }
-            else{
+            
+           
                 if(data['success']){
                     location='index.php';
                     }
                     
                     else{
                         $('error_text').remove();
-                         if(data['error0'])
-                         {
-                            var error='Логин не может быть короче 4 символов';
-                         }
-                        if(data['error1'])
-                        {
-                            var error='Пароль слишком короткий';
-                        }
-                        if(data['error2'])
-                        {
-                            var error='Такой логин уже существует';
-                        }
-                        if(data['error3'])
-                        {
-                            var error='Введенные пароли не совпадают';
-                        }
-                        if(data['error4'])
-                        {
-                            var error='Введите пароль';
-                        }
-                        let row=`<div id="error_text" class="error_text"> <label class="error_text_text">${error}</label></div>`
+                        let message =data['error'];
+                        let row=`<div id="error_text" class="error_text"> <label class="error_text_text">${message}</label></div>`
                                 $("#error").append(row);
 
                         
                     }
                 
 
-                }        
+                       
         
             },
         error: function () {
@@ -69,3 +48,12 @@ function send(event)
 
 }
 )
+FReader = new FileReader();
+FReader.onload = function(e) {
+    document.querySelector("#result").src = e.target.result;
+};
+document.querySelector("input").addEventListener("change", loadImageFile);
+function loadImageFile() {
+    var file = document.querySelector("input").files[0];
+    FReader.readAsDataURL(file);
+}

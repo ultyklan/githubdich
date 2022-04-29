@@ -89,7 +89,7 @@ while ($var=mysqli_fetch_assoc($variables_index)){
 							проводки “под ключ”</div>
 
 						<div onclick="$('html, body').stop().animate({scrollTop : $('.form__wrapper').offset().top - 200}, 500);" class="titlemain__btn" data-aos="zoom-in" data-aos-delay="600">Оставить заявку</div>
-
+						<a href="review.php"><div class="titlemain__btn"  data-aos="zoom-in" data-aos-delay="600">Отзывы</div></a>
 						<div class="titlemain__icons">
 							<div class="icons__item" data-aos="flip-down" data-aos-delay="900">
 								<div class="icons__item_img"><img src="img/titlemain/icons/1.png" alt=""></div>

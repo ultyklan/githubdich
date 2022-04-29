@@ -5,12 +5,14 @@ button.slide_from_left {
     border-radius:10px;
     border: 1px solid #fff;
     padding: 0.60em 0.75em;
-    padding-left: 50px;
-    padding-right: 50px;
+    padding-left: 10%;
+    padding-right: 10%;
     margin: 1rem;
     position: relative;
     z-index: 1;
     overflow: hidden;
+    transition: all .35s;
+    
   
   }
   button.slide_from_left:hover {

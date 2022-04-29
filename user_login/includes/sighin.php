@@ -10,12 +10,12 @@ $response=array();
 $log_in= mysqli_query($connect,"SELECT * FROM `users` WHERE `login`='$login' AND `password`='$password'");
 if (strlen($login)<4)
 {
-    $response['error_login']='Логин';
+    $response['error']='Логин короче 4 символов';
 }
 else{
       if (strlen($password)<6)
         {
-            $response['error_pass']='Пароль'; 
+            $response['error']='Пароль короче 6 символов'; 
         }
         else{
 
@@ -24,7 +24,7 @@ else{
                     $user=mysqli_fetch_assoc($log_in);
                     $conf=$user['email_confirm'];
                     if ($conf=="0"){
-                        $response['error_email']='подтвердите email';
+                        $response['error']=' Подтвердите email';
                     }
                     else{
                         $response['success']='1';
@@ -48,7 +48,7 @@ else{
 
                 }
                 else{
-                    $response['error_user']='Пользователя нема';
+                    $response['error']='Пользователя нема';
                 // header('Location:../index.php');
 
                 }

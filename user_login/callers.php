@@ -57,12 +57,12 @@ require_once '../panel/connection/variables.php';
                     <div class="callers_add">
                         <div class="name">
                             <div class="label_name">
-                                <label for="">Имя:</label>
+                                <label for="">Привет</label>
                             </div>
                         
                             <div class="name_div">
                                 <div class="name_echo">
-                                    <label for="" class="name_echo_label"><?php echo $_SESSION['user']['login'] ?></label>
+                                    <label for="" class="name_echo_label"><?php echo $_SESSION['user']['login'] ?>!</label>
                                 </div>
                             </div>
             

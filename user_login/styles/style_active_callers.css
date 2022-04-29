@@ -26,7 +26,7 @@ body{
       width: 100%;
       min-height:450px;
       max-width: 800px;
-      min-width: 400px;
+      min-width: 588px;
       display: flex;
       background-color:#3cb3ff;
       border-radius:20px;
@@ -57,6 +57,7 @@ body{
   
 }
 .active_callers_block {
+ 
 margin-right: 4px;
   width: 100%;
  margin-bottom: 30px;
@@ -66,6 +67,7 @@ margin-right: 4px;
 }
 
 .active_callers_block::-webkit-scrollbar {
+ 
   width: 10px;
   }
 
@@ -136,11 +138,12 @@ width: 60px;
 .first{
   width: 100px;
   margin-right: 5px;
+  display: flex;
 }
 .information_caller{
   display:flex;
   flex-direction:column;
-  justify-content: center;
+  justify-content: space-between;
 }
 
 
@@ -172,7 +175,7 @@ color: #fff;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgba(255, 255, 255, 0.6);
+    background-color: rgba(0, 0, 0, 0.6);
     z-index: 9;
 }
 .review_input{
@@ -184,6 +187,8 @@ color: #fff;
   border-radius: 5px;
   color: grey;
   font-size: 14px;
+  font-family: 'Roboto', sans-serif;
+  padding: 5px;
 }
 .review_text{
   display: flex;
@@ -208,3 +213,35 @@ margin-bottom: 10px;
   align-items: center;
   justify-content: center;
 }
+.col_callers{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.col_callers_text{
+  font-size: 25px;
+}
+.kostil_inp{
+display: none;
+  color:grey;
+ background-color: #3cb3ff;
+ border:none;
+}
+.error_text_text{
+  color: red;
+}
+.information{
+  display: -webkit-box;
+  -webkit-line-clamp: 1; 
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+
+
+
+
+
+

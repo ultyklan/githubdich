@@ -20,29 +20,15 @@ function send(event)
         },
         success: function (data)
             {   
-            
                 $("#preloader").hide();
-
                 $('.error_text').remove();
             
                         if(data['success']){
                             location='profile.php';
                         }
                             else{
-                                if(data['error_login']){
-                                var error='Логин не может быть меньше 4 символов';
-                                }
-
-                                if(data['error_user']){
-                                var error='Пользователя нема';
-                                }
-                                if(data['error_pass']){
-                                var error='Пароль не может быть меньше 6 символов';
-                                }
-                                if(data['error_email']){
-                                    var error='Подтвердите email';
-                                    }
-                                let row=`<div class="error_text"> <label class="error_text_text">${error}</label></div>`
+                              let message = data['error'];
+                                let row=`<div class="error_text"> <label class="error_text_text">${message}</label></div>`
                                 $("#error").append(row);
 
                                 }

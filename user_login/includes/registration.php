@@ -25,16 +25,16 @@ $count=mysqli_num_rows($result);
 
 if(strlen($login)<4)
 {
-    $response['error0']='Логин не может быть короче 4 символов';
+    $response['error']='Логин не может быть короче 4 символов';
 } 
 else {
         if($count!=0){
-            $response['error2']='Такой логин уже существует';
+            $response['error']='Такой логин уже существует';
         }
         else{ 
                 if (strlen($password)<6)
                 {
-                    $response['error1']='Пароль слишком короткий';
+                    $response['error']='Пароль меньше 6 символов';
                     
                 } 
                     else{
@@ -43,7 +43,7 @@ else {
                                     
                                     $path='upload/'.$_FILES['image']['name'];
                                 move_uploaded_file($_FILES['image']['tmp_name'],'../'.$path);
-                                    $response['success']='1';
+                                    $response['error']='1';
                                     
                                    mysqli_query($connect,"INSERT INTO `users` (`id`, `name`, `login`, `email`, `password`, `photo`, `address`,`hash`,`email_confirm`) 
                                     VALUES (NULL, '$name', '$login', '$email', '$password', '$path', '$address','$hash','0')");
@@ -79,18 +79,18 @@ else {
                                             $mail->Body = $body;    
 
                                         if (!$mail->send()) {
-                                            $response['error5']='Не удалось отправить подтвержение на ваш email ';
+                                            $response['error']='Не удалось отправить подтвержение на ваш email ';
                                         }
-                                        $response['error6']='Регистрация успешно завершена';
+                                        $response['success']='Регистрация успешно завершена';
 
                                     }
                                 else{
-                                    $response['error3']='Введенные пароли не совпадают';
+                                    $response['error']='Введенные пароли не совпадают';
                                     
                                 }
                             }
                             else{
-                                $response['error4']='Введите пароль';
+                                $response['error']='Введите пароль';
                                 
                             }
                     }
